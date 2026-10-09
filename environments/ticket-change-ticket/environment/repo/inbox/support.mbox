@@ -1,0 +1,7 @@
+From ops@internal Mon Oct 06 09:00:00 2025
+From: ops@internal
+To: service-team@internal
+Subject: directory service — weekly housekeeping
+
+Nothing outstanding this week. Reminder: keep `users list` output sorted
+ascending, and prefer adding CLI flags over new subcommands where possible.

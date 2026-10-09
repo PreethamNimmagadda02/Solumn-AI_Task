@@ -1,0 +1,3 @@
+image: payments-api:1.4.1
+name: payments-api
+port: 8080

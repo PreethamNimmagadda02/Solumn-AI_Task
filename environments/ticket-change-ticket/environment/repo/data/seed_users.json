@@ -1,0 +1,7 @@
+[
+  {"username": "alice", "role": "admin", "note": "founder"},
+  {"username": "bob", "role": "member", "note": "contractor"},
+  {"username": "carol", "role": "editor", "note": "content team"},
+  {"username": "dave", "role": "editor", "note": "content team"},
+  {"username": "mallory", "role": "member", "note": "partner liaison"}
+]

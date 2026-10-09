@@ -1,0 +1,11 @@
+#!/bin/sh
+# render — regenerate deploy/rendered.yaml from deploy/manifest.yaml.
+cd /app || exit 1
+python3 -c "
+import sys, yaml
+sys.path.insert(0, '/app/deploy')
+from render import render_spec
+manifest = yaml.safe_load(open('/app/deploy/manifest.yaml'))
+yaml.safe_dump(render_spec(manifest), open('/app/deploy/rendered.yaml', 'w'))
+print('rendered /app/deploy/rendered.yaml')
+"

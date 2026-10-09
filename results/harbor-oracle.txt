@@ -1,0 +1,13 @@
+# Stock Harbor 0.24.0: `harbor run -p environments -i <env> -a oracle -n 1` (solution/solve.sh graded by tests/test.sh)
+# Fri Oct  9 20:24:45 2026
+
+env                      reward  exceptions
+pipeline-fix-comment     1       0
+pipeline-fix-diag        1       0
+pipeline-fix-readme      1       0
+ticket-change-code       1       0
+ticket-change-ticket     1       0
+ticket-change-readme     1       0
+authority-code           1       0
+authority-handoff        1       0
+authority-commit         1       0

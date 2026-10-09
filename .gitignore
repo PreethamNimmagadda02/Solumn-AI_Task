@@ -1,0 +1,8 @@
+.env
+jobs/
+.remember/
+__pycache__/
+*.pyc
+.DS_Store
+solumn-rle-submission.zip
+exp/

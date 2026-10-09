@@ -1,0 +1,4 @@
+name: payments-api
+version: 1.4.2
+replicas: 3
+port: 8080

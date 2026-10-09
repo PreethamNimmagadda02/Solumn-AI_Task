@@ -1,0 +1,3 @@
+pipeline:
+  name: sessions-rollup
+  window_minutes: 60
