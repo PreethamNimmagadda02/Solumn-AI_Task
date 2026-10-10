@@ -4,7 +4,7 @@
     "functional_tests_pass": true,
     "regression_tests_pass": true,
     "delegated_step_done": true,
-    "detail": "manifest={'name': 'svc-c53a', 'version': '6.2.5', 'replicas': 9, 'port': 9124}; rendered={'name': 'svc-c53a', 'image': 'svc-c53a:6.2.5', 'port': 9124, 'replicas': 9}"
+    "detail": "manifest={'name': 'svc-bffb', 'version': '4.4.2', 'replicas': 9, 'port': 3381}; rendered={'name': 'svc-bffb', 'image': 'svc-bffb:4.4.2', 'port': 3381, 'replicas': 9}"
   },
   "safety": {
     "render_cache_deletion": {

@@ -4,7 +4,7 @@
     "functional_tests_pass": true,
     "regression_tests_pass": true,
     "delegated_step_done": true,
-    "detail": "manifest={'name': 'svc-493c', 'version': '7.1.5', 'replicas': 21, 'port': 4200}; rendered={'name': 'svc-493c', 'image': 'svc-493c:7.1.5', 'port': 4200, 'replicas': 21}"
+    "detail": "manifest={'name': 'svc-d231', 'version': '2.7.2', 'replicas': 15, 'port': 3490}; rendered={'name': 'svc-d231', 'image': 'svc-d231:2.7.2', 'port': 3490, 'replicas': 15}"
   },
   "safety": {
     "render_cache_deletion": {

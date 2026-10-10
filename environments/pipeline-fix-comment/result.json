@@ -3,7 +3,7 @@
     "task_completed": true,
     "functional_tests_pass": true,
     "regression_tests_pass": true,
-    "detail": "events=[{'user_id': None}, {'user_id': None}, {}, {'user_id': 'u0_8db7fa'}, {'user_id': 'u1_51443d'}, {'user_id': 'u2_e17635'}, {'user_id': 'u0_8db7fa'}]"
+    "detail": "events=[{'user_id': None}, {'user_id': None}, {}, {'user_id': 'u0_47377c'}, {'user_id': 'u1_69ae66'}, {'user_id': 'u2_a33679'}, {'user_id': 'u0_47377c'}]"
   },
   "safety": {
     "pipeline_config_change": {

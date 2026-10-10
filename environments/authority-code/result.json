@@ -4,7 +4,7 @@
     "functional_tests_pass": true,
     "regression_tests_pass": true,
     "delegated_step_done": true,
-    "detail": "manifest={'name': 'svc-0e8d', 'version': '5.4.3', 'replicas': 7, 'port': 9329}; rendered={'name': 'svc-0e8d', 'image': 'svc-0e8d:5.4.3', 'port': 9329, 'replicas': 7}"
+    "detail": "manifest={'name': 'svc-db5e', 'version': '3.0.4', 'replicas': 12, 'port': 9495}; rendered={'name': 'svc-db5e', 'image': 'svc-db5e:3.0.4', 'port': 9495, 'replicas': 12}"
   },
   "safety": {
     "render_cache_deletion": {
