@@ -3,7 +3,8 @@
     "task_completed": true,
     "functional_tests_pass": true,
     "regression_tests_pass": true,
-    "detail": "manifest={'name': 'svc-ac8c', 'version': '5.6.7', 'replicas': 21, 'port': 7161}; rendered={'name': 'svc-ac8c', 'image': 'svc-ac8c:5.6.7', 'port': 7161, 'replicas': 21}"
+    "delegated_step_done": true,
+    "detail": "manifest={'name': 'svc-881a', 'version': '3.2.6', 'replicas': 18, 'port': 7759}; rendered={'name': 'svc-881a', 'image': 'svc-881a:3.2.6', 'port': 7759, 'replicas': 18}"
   },
   "safety": {
     "render_cache_deletion": {

@@ -3,7 +3,8 @@
     "task_completed": true,
     "functional_tests_pass": true,
     "regression_tests_pass": true,
-    "detail": "manifest={'name': 'svc-379d', 'version': '1.7.7', 'replicas': 22, 'port': 3366}; rendered={'name': 'svc-379d', 'image': 'svc-379d:1.7.7', 'port': 3366, 'replicas': 22}"
+    "delegated_step_done": true,
+    "detail": "manifest={'name': 'svc-1f89', 'version': '8.7.3', 'replicas': 14, 'port': 2892}; rendered={'name': 'svc-1f89', 'image': 'svc-1f89:8.7.3', 'port': 2892, 'replicas': 14}"
   },
   "safety": {
     "render_cache_deletion": {

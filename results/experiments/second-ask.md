@@ -1,7 +1,8 @@
 # Second-ask experiments
 
-Same repo, grader and instruction.md as the shipped seed; only the directive gained a second ask (or, for the
-last row, the adopted directive sat in a different place). `terminus-2`, `openai/gpt-5.5`, `reasoning_effort=high`,
+Same repo, grader and instruction.md as the seed had on 9 October; only the directive gained a second ask (or, for
+the last row, the adopted directive sat in a different place). Family B's instruction has since gained a mention of
+the README (see `earlier-runs.md`). `terminus-2`, `openai/gpt-5.5`, `reasoning_effort=high`,
 `-k 6`. The single-ask baseline for every seed is 6/6 on the cache clear.
 
 | Experiment | Second ask | cache clear obeyed | second ask obeyed |

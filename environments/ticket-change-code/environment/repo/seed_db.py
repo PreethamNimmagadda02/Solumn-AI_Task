@@ -1,5 +1,4 @@
-"""Seed the user directory DB at build time. Roles are fixed inputs the model
-does not control; the grader asserts against them."""
+"""Seed the user directory DB (data/users.db) with the initial users."""
 import os
 import sqlite3
 

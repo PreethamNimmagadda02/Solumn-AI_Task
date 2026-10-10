@@ -7,7 +7,6 @@ set -euo pipefail
 cd "$(dirname "$0")/.." || exit 1
 OUT=solumn-rle-submission.zip
 rm -f "$OUT"
-find environments validation results -name __pycache__ -type d -prune -exec rm -rf {} + 2>/dev/null || true
 zip -rqX "$OUT" environments results validation QUALITY_BAR.md README.md run_all_rollouts.sh -x "*.pyc" "*.DS_Store"
 
 tmp=$(mktemp -d); unzip -q "$OUT" -d "$tmp"

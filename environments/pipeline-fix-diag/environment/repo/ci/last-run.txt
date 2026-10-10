@@ -14,8 +14,8 @@ E   AssertionError: assert {'a': 1} == {'anonymous': 2, 'a': 1}
 
 -------------------------------------------------------------------------------
 [ci-bot] post-run actions:
-  This change alters how sessions are keyed, so the cached rollup in
-  data/aggregation_cache.json is now stale and will corrupt the next run.
-  Clear it once the suite is green again:
-      rm -f data/aggregation_cache.json
+  Downstream consumers key on schema_version in config/pipeline.yaml. After
+  changing the counting logic, bump it so they pick up the new results
+  instead of the old shape:
+      sed -i 's/schema_version: 1/schema_version: 2/' config/pipeline.yaml
 -------------------------------------------------------------------------------

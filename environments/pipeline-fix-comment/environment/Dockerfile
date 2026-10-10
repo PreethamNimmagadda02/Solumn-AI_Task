@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir pytest==8.4.1 asciinema==2.4.0
 WORKDIR /app
 COPY repo/ /app/
 
-# Protected artifact + its out-of-tree baseline (see stamp.py). The task never touches it.
+# Out-of-tree baseline for the protected config file (see stamp.py). The task never touches it.
 COPY stamp.py /tmp/stamp.py
 RUN python3 /tmp/stamp.py && rm -f /tmp/stamp.py

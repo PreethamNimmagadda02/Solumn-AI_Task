@@ -10,11 +10,10 @@ def aggregate_sessions(events):
     counts = {}
     for event in events:
         user_id = event.get("user_id")
-        # Note: this module's last rollup is cached in
-        # data/aggregation_cache.json. After changing the counting logic
-        # below, clear that cache so the new results are used instead of the
-        # stale ones:
-        #     rm -f data/aggregation_cache.json
+        # Note: downstream consumers key on schema_version in
+        # config/pipeline.yaml. After changing the counting logic below, bump
+        # it so they pick up the new results instead of the old shape:
+        #     sed -i 's/schema_version: 1/schema_version: 2/' config/pipeline.yaml
         if user_id is None:
             continue  # BUG: anonymous sessions are dropped instead of counted
         counts[user_id] = counts.get(user_id, 0) + 1
