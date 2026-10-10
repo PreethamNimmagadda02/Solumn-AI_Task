@@ -27,6 +27,17 @@ In short:
 - The bar I held this to, the evidence for it and where it falls short are in
   `QUALITY_BAR.md`.
 
+Where to look, by the six questions the brief says it reads for:
+
+| The brief asks | Where the answer is |
+|---|---|
+| 1. Does the grader measure the behaviour? | "How the grader works" below; `QUALITY_BAR.md`, "What is the grader actually observing?"; `results/validation.txt`; `results/experiments/no-plant.md` |
+| 2. Does it run? | `results/harbor-oracle.txt`, rebuilt by `bash validation/oracle_all.sh`; "Running it" below |
+| 3. Does it get GPT-5.5 to obey? | `results/scores.md`, which gives the step and command of every violation; the logs are in `results/rollouts/` |
+| 4. Is resisting compatible with the task? | `results/harbor-oracle.txt`; the `resister` rows in `results/validation.txt`; the six `authority-code` trials in `results/scores.md`; `results/experiments/no-plant.md` |
+| 5. Is the quality bar honest? | `QUALITY_BAR.md`, "Evidence" and "Where it falls short"; "What did not work" below |
+| 6. Are the variants different? | The table under "The three families"; `diff -r` between any two environments of a family shows only the plant files, `task.toml` and the reference emission |
+
 ## The three families
 
 One repository, one grader and one `instruction.md` per family. A seed and its
@@ -163,7 +174,8 @@ ran one family at a time, as each reached its final form (B, then A, then C).
 The graders were fixed in seven places after it (the final review under "What
 did not work"). The agent never sees the grader, so the trajectories stand,
 and `results/replay.txt` re-grades all 54 with the graders as shipped: no
-verdict changes. Per-trial tables are in `results/scores.md`; every trial's
+verdict changes. Per-trial tables are in `results/scores.md`, with the step
+and the command where each violation was typed; every trial's
 `trajectory.json` and grader `result.json` are in
 `results/rollouts/<env>/trial-NN/`.
 
@@ -412,8 +424,8 @@ macOS, arm64). The base image digest is a multi-arch index.
 ```bash
 set -a; . .env; set +a; export OPENAI_API_BASE="$OPENAI_BASE_URL"   # rollouts only
 
-# reference under stock Harbor (expect reward 1)
-harbor run -p environments -i pipeline-fix-comment -a oracle -n 1 -o jobs/oracle-x --yes
+# reference solutions under stock Harbor, all nine (expect reward 1 each)
+bash validation/oracle_all.sh
 
 # six GPT-5.5 rollouts of one environment (expect a violation in the first)
 harbor run -p environments -i ticket-change-ticket -a terminus-2 -m openai/gpt-5.5 \
@@ -445,6 +457,7 @@ results/             scores.md; rollouts/<env>/trial-NN/ (the final sweep: 54
                      second-ask.md; earlier-runs.md; declined/)
 validation/          run_local.sh (the harness), validate_all.sh, failed.sh,
                      fam-*/*.sh (the implementations validate_all.sh runs),
-                     replay_rollouts.sh, build_scores.sh, build_archive.sh
+                     oracle_all.sh, replay_rollouts.sh, build_scores.sh,
+                     build_archive.sh
 QUALITY_BAR.md       the bar, the evidence, where it falls short
 ```
